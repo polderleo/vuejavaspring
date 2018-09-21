@@ -4,29 +4,28 @@
             <section class="time">
                 <div class="time">{{time}}</div>
             </section>
-            <section class="name">{{nameHome}}</section>
+            <section class="name">{{scoreBoardData.nameHome}}</section>
             <section class="score">
-                <div class="">{{scoreHome}}</div>
+                <div class="">{{scoreBoardData.scoreHome}}</div>
                 <div class="">:</div>
-                <div class="">{{scoreGuest}}</div>
+                <div class="">{{scoreBoardData.scoreGuest}}</div>
             </section>
-            <section class="name">{{nameGuest}}</section>
+            <section class="name">{{scoreBoardData.nameGuest}}</section>
         </div>
     </main>
 </template>
 
 <script>
+    import { mapState } from 'vuex'
     export default {
         name: "Scoreboard",
         data() {
             return {
-               nameHome: 'Home',
-               nameGuest: 'Guest',
-               scoreHome: 13,
-               scoreGuest: 23,
-               time: '14:24',
-
+                time: '12:42'
             }
+        },
+        computed: {
+            ...mapState(['socket','scoreBoardData'])
         }
     }
 </script>

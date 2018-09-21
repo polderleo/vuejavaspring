@@ -3,6 +3,11 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import VueNativeSock from 'vue-native-websocket'
+Vue.use(VueNativeSock, 'ws://localhost:9090', { store: store, format: 'json'})
+
+//import '../node_modules/reset-css/reset.css'
+
 Vue.config.productionTip = false;
 
 new Vue({
@@ -10,3 +15,4 @@ new Vue({
     store,
   render: h => h(App)
 }).$mount('#app');
+

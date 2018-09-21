@@ -1,7 +1,7 @@
 <template>
     <main>
         <div class="container">
-            <h4>Halftimescore</h4>
+            <h4>Halftime</h4>
             <div class="body">
                 <section class="name">{{scoreBoardData.nameHome}}</section>
                 <section class="score">
@@ -21,16 +21,8 @@
     export default {
 
         name: "Halftime",
-        // data() {
-        //     return {
-        //         nameHome: 'Home',
-        //         nameGuest: 'Guest',
-        //         scoreHome: 13,
-        //         scoreGuest: 23
-        //     }
-        // },
         computed: {
-            ...mapState(['scoreBoardData'])
+            ...mapState(['socket','scoreBoardData'])
         }
     }
 </script>

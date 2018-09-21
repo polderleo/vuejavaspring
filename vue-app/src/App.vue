@@ -1,7 +1,8 @@
 <template>
     <main>
         <router-link to="/scoreboard">Scoreboard</router-link> |
-        <router-link to="/halftime">Halftime</router-link>
+        <router-link to="/halftime">Halftime</router-link> |
+        <router-link to="/all">All</router-link>
         <router-view/>
     </main>
 </template>
