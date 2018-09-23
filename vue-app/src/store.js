@@ -7,10 +7,10 @@ export default new Vuex.Store({
 
     state: {
         scoreBoardData: {
-            nameHome: 'Home',
-            nameGuest: 'Guest',
-            scoreHome: 0,
-            scoreGuest: 0
+            nameHome: 'HOME',
+            nameGuest: 'GUEST',
+            scoreHome: 34,
+            scoreGuest: 25
         },
         socket: {
             isConnected: false,

@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Halftime from './components/Halftime.vue'
 import Scoreboard from './components/Scoreboard.vue'
-import All from './views/All.vue'
 
 Vue.use(Router)
 
@@ -20,11 +19,6 @@ export default new Router({
         name: 'scoreboard',
         component: Scoreboard
     },
-    {
-      path: '/all',
-      name: 'all',
-      component: All
-  },
     // {
     //   path: '/about',
     //   name: 'about',

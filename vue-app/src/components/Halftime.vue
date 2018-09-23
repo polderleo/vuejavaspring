@@ -1,16 +1,32 @@
 <template>
     <main>
         <div class="container">
-            <h4>Halftime</h4>
-            <div class="body">
-                <section class="name">{{scoreBoardData.nameHome}}</section>
-                <section class="score">
-                    <div>{{scoreBoardData.scoreHome}}</div>
-                    <div>:</div>
-                    <div>{{scoreBoardData.scoreGuest}}</div>
-                </section>
-                <section class="name">{{scoreBoardData.nameGuest}}</section>
+
+            <div class="body-left">
+
+                <div class="logo">
+
+                </div>
             </div>
+            <div class="body-right">
+                <h4>HALBZEIT</h4>
+                <section>
+                    <div class="name">{{scoreBoardData.nameHome}}</div>
+                    <div class="score">{{scoreBoardData.scoreHome}}</div>
+                </section>
+                <section>
+                    <div class="name">{{scoreBoardData.nameGuest}}</div>
+                    <div class="score">{{scoreBoardData.scoreGuest}}</div>
+                </section>
+            </div>
+                <!--<section class="name"></section>-->
+                <!--<section class="score">-->
+                    <!--<div></div>-->
+                    <!--<div>:</div>-->
+                    <!--<div></div>-->
+                <!--</section>-->
+                <!--<section class="name"></section>-->
+
         </div>
     </main>
 </template>
@@ -30,14 +46,17 @@
 <style lang="scss" scoped>
     main {
         width: 100%;
-        height: 100%;
-        position: relative;
 
         .container {
-            padding: 15px;
-            width: 650px;
-            height: 125px;
-            background-color: #2c3e50;
+            padding: 10px 15px;
+            width: 700px;
+            height: 120px;
+            background-color: #801f66;
+            border-radius: 30px;
+
+            -webkit-box-shadow: 0px 11px 5px -6px rgba(0,0,0,0.4);
+            -moz-box-shadow: 0px 11px 5px -6px rgba(0,0,0,0.4);
+            box-shadow: 0px 11px 5px -6px rgba(0,0,0,0.4);
 
             position: absolute;
             bottom: 50px;
@@ -46,27 +65,49 @@
             margin: 0 auto;
 
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: space-between;
 
-            font-size: 2rem;
+            font-size: 1.5rem;
+            font-weight: bold;
             color: white;
 
-            .body {
-                width: 100%;
-                display: flex;
-                align-items: flex-end;
-                justify-content: space-between;
-            }
-            .score {
+            .body-left {
+                width: 200px;
+                height: 100%;
+
                 display: flex;
                 align-items: center;
+                justify-content: center;
 
+                .logo {
+                    width: 80px;
+                    height: 80px;
+                    background-color: aquamarine;
+                }
             }
 
-            .name {
-                font-weight: bold;
+            .body-right {
+                padding: 0 25px;
+                width: 100%;
+                height: 100%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                h4 {
+                    font-size: 1.75rem;
+                    margin-bottom: 10px;
+                }
+                section {
+                    margin: 3px;
+                    width: 100%;
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
             }
         }
     }
