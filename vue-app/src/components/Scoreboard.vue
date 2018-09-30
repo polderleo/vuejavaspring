@@ -1,7 +1,8 @@
 <template>
     <main>
         <!-- TODO annimate add to class => animated infinite zoomOutUp-->
-        <div class="container">
+        <transition name="fade">
+          <div v-if="show" class="container">
             <section class="time">
                 <div class="time">{{time}}</div>
             </section>
@@ -38,7 +39,10 @@
                 </section>
             </div>
         </div>
-
+        </transition>
+        <div class="annimation">
+          <button v-on:click="show = !show" type="button" name="button">annimate scoreBoard</button>
+        </div>
     </main>
 </template>
 
@@ -49,6 +53,7 @@
         data() {
             return {
                 time: '12:42',
+                show: true
             }
         },
         computed: {
@@ -63,6 +68,9 @@
         width: 100%;
         height: 50%;
         padding: 25px;
+
+        display: flex;
+        align-items: space-between;
         .container {
             width: 400px;
             height: 50px;
@@ -148,6 +156,13 @@
             }
 
         }
+    }
+
+    .fade-enter-active, .fade-leave-active {
+      transition: opacity .5s;
+    }
+    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+      opacity: 0;
     }
 
 </style>
