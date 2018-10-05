@@ -11,11 +11,11 @@
             <div class="body-right">
                 <h4>HALBZEIT</h4>
                 <section>
-                    <div class="name">{{scoreBoardData.nameHome}}</div>
+                    <div class="name">{{scoreBoardData.longNameHome}}</div>
                     <div class="score">{{scoreBoardData.scoreHome}}</div>
                 </section>
                 <section>
-                    <div class="name">{{scoreBoardData.nameGuest}}</div>
+                    <div class="name">{{scoreBoardData.longNameGuest}}</div>
                     <div class="score">{{scoreBoardData.scoreGuest}}</div>
                 </section>
             </div>
