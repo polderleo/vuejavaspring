@@ -10,7 +10,8 @@ export default new Vuex.Store({
             nameHome: 'HOME',
             nameGuest: 'GUEST',
             scoreHome: 34,
-            scoreGuest: 25
+            scoreGuest: 25,
+            clock: '00:00'
         },
         socket: {
             isConnected: false,
@@ -33,7 +34,9 @@ export default new Vuex.Store({
         // default handler called for all methods
         SOCKET_ONMESSAGE (state, message)  {
             state.socket.message = message.data
+            console.log(state)
             console.log(message)
+                    
         },
         // mutations for reconnect methods
         SOCKET_RECONNECT(state, count) {

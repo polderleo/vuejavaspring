@@ -4,7 +4,7 @@
         <transition name="fade">
           <div v-if="show" class="container">
             <section class="time">
-                <div class="time">{{time}}</div>
+                <div class="time">{{scoreBoardData.clock}}</div>
             </section>
             <section class="name">{{scoreBoardData.nameHome}}</section>
             <section class="score">
@@ -52,7 +52,6 @@
         name: "Scoreboard",
         data() {
             return {
-                time: '12:42',
                 show: true
             }
         },

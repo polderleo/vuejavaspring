@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 
 import VueNativeSock from 'vue-native-websocket'
-Vue.use(VueNativeSock, 'ws://localhost:9090', { store: store, format: 'json'})
+Vue.use(VueNativeSock, 'ws://localhost:8028/ws/chat', { store: store, format: 'json'})
 
 //import '../node_modules/reset-css/reset.css'
 
@@ -15,4 +15,3 @@ new Vue({
     store,
   render: h => h(App)
 }).$mount('#app');
-
