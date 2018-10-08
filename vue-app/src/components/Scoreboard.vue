@@ -6,13 +6,13 @@
             <section class="time">
                 <div class="time">{{scoreBoardData.clock}}</div>
             </section>
-            <section class="name">{{scoreBoardData.nameHome}}</section>
+            <section class="name">{{scoreBoardData.shortNameHome}}</section>
             <section class="score">
                 <div class="">{{scoreBoardData.scoreHome}}</div>
                 <div class=""> - </div>
                 <div class="">{{scoreBoardData.scoreGuest}}</div>
             </section>
-            <section class="name">{{scoreBoardData.nameGuest}}</section>
+            <section class="name">{{scoreBoardData.shortNameGuest}}</section>
 
             <div class="penalty-container">
                 <section class="penalty-home">

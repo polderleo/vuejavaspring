@@ -49,16 +49,16 @@ export default new Vuex.Store({
                     state.scoreBoardData.scoreGuest = message.value;
                     break;
                 case "shortNameGuest":
-                    state.scoreBoardData.nameGuest = message.value;
+                    state.scoreBoardData.shortNameGuest = message.value;
                     break;
                 case "shortNameHome":
-                    state.scoreBoardData.nameHome = message.value;
+                    state.scoreBoardData.shortNameHome = message.value;
                     break;
                 case "longNameGuest":
-                    state.scoreBoardData.nameGuest = message.value;
+                    state.scoreBoardData.longNameGuest = message.value;
                     break;
                 case "longNameHome":
-                    state.scoreBoardData.nameHome = message.value;
+                    state.scoreBoardData.longNameHome = message.value;
                     break;
             }
         },
